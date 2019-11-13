@@ -12,7 +12,8 @@ class DownloadHanlder(Thread):
         self.url = url
 
     def run(self):
-        filename = self.url[self.url.rfind('/') + 1:]
+        filename = self.url[self.url\
+                                .rfind('/') + 1:]  # rfind 从右向左查找/的位置 +1 就是从/后面开始取值
         resp = requests.get(self.url)
         with open("./data/" + filename, 'wb') as f:
             f.write(resp.content)
@@ -24,9 +25,8 @@ def main():
     # 要使用该数据接口需要在天行数据的网站上注册
     # 然后用自己的Key替换掉下面代码的中APIKey即可
     #    resp = requests.get( 'http://api.tianapi.com/meinv/?key=APIKey&num=10')
-    with open('mm.txt','r',encoding='utf-8') as f:
-
-    # 将服务器返回的JSON格式的数据解析为字典
+    with open('mm.txt', 'r', encoding='utf-8') as f:
+        # 将服务器返回的JSON格式的数据解析为字典
         data_model = json.load(f)
     for mm_dict in data_model['newslist']:
         url = mm_dict['picUrl']
