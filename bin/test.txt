@@ -7,4 +7,4 @@ C5  test branch
 C6  add something in branch
 C9  continue add master
 C10 merge from branch ,must commit first
-C11 do some change on github directly
+C12 do some change on master
