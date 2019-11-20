@@ -2,17 +2,13 @@ C1
 c2  add again
 C3
 C4  V2 test
+C9  continue add master
 C5  test branch
 C6  add something in branch
 C9  continue add master
 C10 merge from branch ,must commit first
-C12 do some change on master
-test
+C11 do some change on github directly
 
+test2
+test3 rebase
 
-lalalalala
-
-
-
-
-lalalalala
