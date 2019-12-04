@@ -7,7 +7,7 @@ import requests
 # 继承Thread类创建自定义的线程类
 class DownloadHanlder(Thread):
 
-    def __init__(self, url):
+    def __init__(self, url):  #实例化时执行的初始化
         super().__init__()
         self.url = url
 
@@ -28,7 +28,7 @@ def main():
     with open('mm.txt', 'r', encoding='utf-8') as f:
         # 将服务器返回的JSON格式的数据解析为字典
         data_model = json.load(f)
-    for mm_dict in data_model['newslist']:
+    for mm_dict in data_model['newslist']:  #字典里套字典
         url = mm_dict['picUrl']
         # 通过多线程的方式实现图片下载
         DownloadHanlder(url).start()
