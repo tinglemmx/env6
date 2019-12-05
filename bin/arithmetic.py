@@ -51,7 +51,7 @@ while True:
     total = fish
     enough = True
     for _ in range(5):
-        if (total - 1) % 5 == 0:
+        if (total - 1) % 5 == 0:   #连续5次 减1 能被5 整除  的第一个数
             total = (total - 1) // 5 * 4
         else:
             enough = False
